@@ -121,6 +121,33 @@ h6 {
 	width:140px;
 	float:left;
 	}
+.tooltip {
+	display:inline;
+	position:relative;
+}
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
 .navbar {
 		background-color:#186dac;
 		height:86px;
@@ -142,14 +169,33 @@ h6 {
 		}
 .menu a:hover{
 	color:black;
+	background-color:gray;
 	}
-.prod a:hover {
+#sidebar {
+	float:left;
+	width:140px;
+	background-color:#186dac;
+	border-radius:20px;
+	clear:both;
+	text-align:center;
+	}
+#sidebar li {
+	padding-top:20px;
+	padding-bottom:20px;
+
+	}
+#sidebar a {
+	color:white;
+	text-decoration:none;
+	}
+#sidebar p {
+	color:white;
+	}
+#sidebar a:hover {
 	color:gray;
 	}
-
 #content{
-	
-	background-color:white;
+	background-color:#eef1f5;
 	width:960px;
 	margin-left:auto;
 	margin-right:auto;
@@ -176,6 +222,7 @@ h6 {
 	}
 #info h6 {
 	margin:0px;
+	text-align:center;
 	}
 #info p {
 	line-height:23px;
@@ -205,18 +252,11 @@ h6 {
 	}
 
 #footer{
-	background-color:#0070c5;
+	background-color:#186dac;
 	clear:both;
 	}
-#logo {
-	width:137px;
-	height:86px;
-	}
-#Aplus {
-	width:56px;
-	height:56px;
-	margin:0px;
-	}
+
+
 
 
 
