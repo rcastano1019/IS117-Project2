@@ -115,7 +115,7 @@ h5 {
 h6 {
 	font-size:120%;
 	}
-
+/*LOGO TOOLTIP and additional CSS*/
 .logo {
 	height:86px;
 	width:140px;
@@ -148,6 +148,8 @@ h6 {
     position: absolute;
     z-index: 99;
 }
+/*END LOGO*/
+/*START NAV BAR*/
 .navbar {
 		background-color:#186dac;
 		height:86px;
@@ -172,6 +174,8 @@ h6 {
 	color:black;
 	background-color:white;
 	}
+/*END NAV BAR*/
+/*Side Nav Bar*/
 #sidebar {
 	float:left;
 	width:140px;
@@ -179,6 +183,7 @@ h6 {
 	border-radius:20px;
 	clear:both;
 	text-align:center;
+	position:relative;
 	}
 #sidebar li {
 	padding-top:20px;
@@ -195,10 +200,10 @@ h6 {
 #sidebar a:hover {
 	color:gray;
 	}
+/*END SIDEBAR*/
 #content{
 	background-color:#eef1f5;
 	width:960px;
-	height:960px;
 	border-radius:20px;
 	margin-left:auto;
 	margin-right:auto;
@@ -259,6 +264,16 @@ h6 {
 	padding-right:220px;
 	
 	}
+/*About page*/
+#about h2 {
+	text-align:center;
+	}
+#about img {
+	text-align:center;
+	height:226px;
+	width:226px;
+	}
+/*Home Images*/
 #images h4 {
 	color:#b1b1b1;
 	text-align:center;
@@ -269,6 +284,7 @@ h6 {
 	display:inline;
 	padding:10px;
 	}
+/*Product Page Images*/
 #prodimg h4 {
 	color:#b1b1b1;
 	text-align:center;
@@ -280,15 +296,49 @@ h6 {
 	height:139px;
 	width:139px;
 	}
+/*Timeline Page*/
+#y1985 {
+	background-color:#F8F8F8;
+	border-radius:20px;
+	}
+#y1968 img {
+	text-align:center;
+	height:139px;
+	width:139px;
+	}
+#y1985 img {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	height:139px;
+	width:139px;
+	}
+#y2000 img {
+	text-align:center;
+	height:139px;
+	width:139px;
+	}
+#y1985 h2 {
+	text-align:center;
+	color:#b1b1b1;
+	}
+#y1968 h2 {
+	text-align:center;
+	color:#b1b1b1;
+	}
+#y2000 h2 {
+	text-align:center;
+	color:#b1b1b1;
+	}
+
+/*FOOTER*/
 #footer{
 	background-color:#186dac;
 	clear:both;
 	}
 /*Form Css*/
 #register-form {
-   /* background: url("form-fieldset.gif") repeat-x scroll left bottom #F8FDEF;
-	border: 1px solid #DFDCDC;
-    border-radius: 15px 15px 15px 15px;*/
+   
 	text-align:center;
     display: inline-block;
     margin-bottom: 30px;
