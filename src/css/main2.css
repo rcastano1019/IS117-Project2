@@ -121,13 +121,39 @@ h6 {
 	width:140px;
 	float:left;
 	}
-
+.tooltip {
+	display:inline;
+	position:relative;
+}
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
 /*END LOGO*/
 /*START NAV BAR*/
 .navbar {
 		background-color:#186dac;
 		height:86px;
-		width:960px;
+		width:1400px;
 		text-align:center;
 		line-height:86px;
 		margin:auto;
@@ -156,9 +182,8 @@ h6 {
 	background-color:#186dac;
 	border-radius:20px;
 	clear:both;
-	position: relative;
-	margin-left: 65px;
-	padding-right: 10px;
+	text-align:center;
+	position:relative;
 	}
 #sidebar li {
 	padding-top:20px;
@@ -182,8 +207,6 @@ h6 {
 	border-radius:20px;
 	margin-left:auto;
 	margin-right:auto;
-	padding-top: 10px;
-	padding-left: 10px;
 	}
 #head { 
 	text-align:center;
@@ -220,15 +243,6 @@ h6 {
 	line-height:23px;
 	margin:0px;
 	}
-#info1 {
-	padding-top: 10px;
-}
-#info2 {
-	padding-top: 20px;
-}
-#info3{
-	padding-top: 20px;
-}
 #inforight {
 	margin:0px;
 	width:390px;
@@ -237,41 +251,25 @@ h6 {
 #inforight li {
 	list-style-type:none;
 }
-#info_right1 {
-	padding-top: 30px;
-}
-#info_right2{
-	padding-top: 35px;
-}
-#info_right3{
-	padding-top: 35px;
-}
 #key {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-right: 10px;
 	clear:both;
 	}
-
 #body {
 	
 	height:593px;
 	font-size:14px;
+	text-align:center;
 	background-color:#eef1f5;
-	text-align: center;
+	padding-left:220px;
+	padding-right:220px;
+	
 	}
 /*About page*/
-#about p {
+#about h2 {
 	text-align:center;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-}
-#about {
-	width: 960px;
-	height: 226px;
-}
-#about_image img{
+	}
+#about img {
+	text-align:center;
 	height:226px;
 	width:226px;
 	}
@@ -299,27 +297,15 @@ h6 {
 	width:139px;
 	}
 /*Timeline Page*/
-#y1968 h2 {
-	text-align: center;
-}
 #y1985 {
 	background-color:#F8F8F8;
 	border-radius:20px;
 	}
-#y1985 h6{
-	padding-left: 10px;
-}
-#y1968 h6 {
-	padding-left: 10px;
-}
 #y1968 img {
 	text-align:center;
 	height:139px;
 	width:139px;
 	}
-#y1998 {
-	padding-bottom: 20px;
-}
 #y1985 img {
 	margin-left:auto;
 	margin-right:auto;
@@ -327,9 +313,6 @@ h6 {
 	height:139px;
 	width:139px;
 	}
-#y2000 h6 {
-	padding-left: 10px;
-}
 #y2000 img {
 	text-align:center;
 	height:139px;
@@ -338,42 +321,33 @@ h6 {
 #y1985 h2 {
 	text-align:center;
 	color:#b1b1b1;
-	padding-top: 30px;
+	}
+#y1968 h2 {
+	text-align:center;
+	color:#b1b1b1;
 	}
 #y2000 h2 {
 	text-align:center;
 	color:#b1b1b1;
 	}
-#y2012 {
-    padding-bottom: 20px;
-}
 
 /*FOOTER*/
 #footer{
-	margin: 0 auto;
-	padding-left: 10px;
 	background-color:#186dac;
 	clear:both;
-	width: 960px;
-	height: 53px;
-	line-height: 53px;
 	}
 /*Form Css*/
 #register-form {
-    /*background: url("form-fieldset.gif") repeat-x scroll left bottom #F8FDEF;
-    border: 1px solid #DFDCDC;
-    border-radius: 15px 15px 15px 15px;*/
+   
+	text-align:center;
     display: inline-block;
     margin-bottom: 30px;
     margin-left: 20px;
     margin-top: 10px;
-    padding: 25px 280px 10px;
+    padding: 25px 50px 10px;
     width: 350px;
 }
  
-#register-form h2 {
-	text-align: center;
-}
 #register-form .fieldgroup {
     background: url("form-divider.gif") repeat-x scroll left top transparent;
     display: inline-block;
@@ -388,12 +362,16 @@ h6 {
     width: 110px;
 }
  
-#register-form .fieldgroup input, #register-form .fieldgroup textarea, #register-form .fieldgroup select {
+#register-form .fieldgroup input, #register-form .fieldgroup select {
     float: right;
     margin: 10px 0;
     height: 25px;
 }
- 
+#register-form.fieldgroup textarea {
+	float:right;
+	margin:10px 0;
+	}
+
 #register-form .submit {
     padding: 10px;
     width: 220px;
@@ -408,6 +386,8 @@ h6 {
     text-align: left;
     width: 220px;
 }
+
+
 
 
 
